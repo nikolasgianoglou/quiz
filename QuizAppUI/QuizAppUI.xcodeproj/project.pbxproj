@@ -14,19 +14,11 @@
 			remoteGlobalIDString = D542BF962D7A0EBE00A99792;
 			remoteInfo = QuizAppUI;
 		};
-		D542BFB82D7A0EBF00A99792 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D542BF8F2D7A0EBE00A99792 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D542BF962D7A0EBE00A99792;
-			remoteInfo = QuizAppUI;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D542BF972D7A0EBE00A99792 /* QuizAppUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizAppUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D542BFAD2D7A0EBF00A99792 /* QuizAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D542BFB72D7A0EBF00A99792 /* QuizAppUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -70,13 +62,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D542BFB42D7A0EBF00A99792 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -94,7 +79,6 @@
 			children = (
 				D542BF972D7A0EBE00A99792 /* QuizAppUI.app */,
 				D542BFAD2D7A0EBF00A99792 /* QuizAppUITests.xctest */,
-				D542BFB72D7A0EBF00A99792 /* QuizAppUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,26 +131,6 @@
 			productReference = D542BFAD2D7A0EBF00A99792 /* QuizAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D542BFB62D7A0EBF00A99792 /* QuizAppUIUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D542BFC82D7A0EBF00A99792 /* Build configuration list for PBXNativeTarget "QuizAppUIUITests" */;
-			buildPhases = (
-				D542BFB32D7A0EBF00A99792 /* Sources */,
-				D542BFB42D7A0EBF00A99792 /* Frameworks */,
-				D542BFB52D7A0EBF00A99792 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D542BFB92D7A0EBF00A99792 /* PBXTargetDependency */,
-			);
-			name = QuizAppUIUITests;
-			packageProductDependencies = (
-			);
-			productName = QuizAppUIUITests;
-			productReference = D542BFB72D7A0EBF00A99792 /* QuizAppUIUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,10 +145,6 @@
 						CreatedOnToolsVersion = 16.0;
 					};
 					D542BFAC2D7A0EBF00A99792 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = D542BF962D7A0EBE00A99792;
-					};
-					D542BFB62D7A0EBF00A99792 = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = D542BF962D7A0EBE00A99792;
 					};
@@ -206,7 +166,6 @@
 			targets = (
 				D542BF962D7A0EBE00A99792 /* QuizAppUI */,
 				D542BFAC2D7A0EBF00A99792 /* QuizAppUITests */,
-				D542BFB62D7A0EBF00A99792 /* QuizAppUIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,13 +179,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D542BFAB2D7A0EBF00A99792 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D542BFB52D7A0EBF00A99792 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,13 +202,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D542BFB32D7A0EBF00A99792 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -264,11 +209,6 @@
 			isa = PBXTargetDependency;
 			target = D542BF962D7A0EBE00A99792 /* QuizAppUI */;
 			targetProxy = D542BFAE2D7A0EBF00A99792 /* PBXContainerItemProxy */;
-		};
-		D542BFB92D7A0EBF00A99792 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D542BF962D7A0EBE00A99792 /* QuizAppUI */;
-			targetProxy = D542BFB82D7A0EBF00A99792 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -482,38 +422,6 @@
 			};
 			name = Release;
 		};
-		D542BFC92D7A0EBF00A99792 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.QuizAppUIUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = QuizAppUI;
-			};
-			name = Debug;
-		};
-		D542BFCA2D7A0EBF00A99792 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.QuizAppUIUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = QuizAppUI;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -540,15 +448,6 @@
 			buildConfigurations = (
 				D542BFC62D7A0EBF00A99792 /* Debug */,
 				D542BFC72D7A0EBF00A99792 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D542BFC82D7A0EBF00A99792 /* Build configuration list for PBXNativeTarget "QuizAppUIUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D542BFC92D7A0EBF00A99792 /* Debug */,
-				D542BFCA2D7A0EBF00A99792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
