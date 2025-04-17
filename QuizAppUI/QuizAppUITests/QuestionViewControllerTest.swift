@@ -43,23 +43,37 @@ class QuestionViewControllerTest: XCTestCase {
         }
 
         sut.tableView.select(row: 0)
-
         XCTAssertEqual(receivedAnswer, ["A1"])
     }
 
-    func test_optionSelected_withTwoOptions_notifiesDelegateWithLastSelection() {
+    func test_optionSelected_withSingleOption_notifiesDelegateWithLastSelection() {
         var receivedAnswer = [String]()
         let sut = makeSUT(options: ["A1", "A2"]) {
             receivedAnswer = $0
         }
 
         sut.tableView.select(row: 0)
-
         XCTAssertEqual(receivedAnswer, ["A1"])
 
         sut.tableView.select(row: 1)
-
         XCTAssertEqual(receivedAnswer, ["A2"])
+    }
+
+    func test_optionSelected_withSingleOption_doesNotNotififyDelegateWithEmptySelection() {
+        var receivedAnswer = [String]()
+        var callbackCount = 0
+        let sut = makeSUT(options: ["A1", "A2"]) {
+            receivedAnswer = $0
+            callbackCount += 1
+        }
+
+        sut.tableView.select(row: 0)
+        XCTAssertEqual(receivedAnswer, ["A1"])
+        XCTAssertEqual(callbackCount, 1)
+
+        sut.tableView.deselect(row: 0)
+        XCTAssertEqual(receivedAnswer, ["A1"])
+        XCTAssertEqual(callbackCount, 1)
     }
 
     func test_optionSelected_withMultipleOptionsSelected_notifiesDelegateSelection() {
@@ -68,12 +82,22 @@ class QuestionViewControllerTest: XCTestCase {
         sut.tableView.allowsMultipleSelection = true
 
         sut.tableView.select(row: 0)
-
         XCTAssertEqual(receivedAnswer, ["A1"])
 
         sut.tableView.select(row: 1)
-
         XCTAssertEqual(receivedAnswer, ["A1", "A2"])
+    }
+
+    func test_optionDeselected_withMultipleSelectionEnabled_notifiesDelegate() {
+        var receivedAnswer = [String]()
+        let sut = makeSUT(options: ["A1", "A2"]) { receivedAnswer = $0 }
+        sut.tableView.allowsMultipleSelection = true
+
+        sut.tableView.select(row: 0)
+        XCTAssertEqual(receivedAnswer, ["A1"])
+
+        sut.tableView.deselect(row: 0)
+        XCTAssertEqual(receivedAnswer, [])
     }
 
     //MARK: - Helpers
@@ -99,5 +123,11 @@ private extension UITableView {
         let indexPath = IndexPath(row: row, section: 0)
         selectRow(at: indexPath, animated: false, scrollPosition: .none)
         delegate?.tableView?(self, didSelectRowAt: IndexPath(row: row, section: 0))
+    }
+
+    func deselect(row: Int) {
+        let indexPath = IndexPath(row: row, section: 0)
+        deselectRow(at: indexPath, animated: true)
+        delegate?.tableView?(self, didDeselectRowAt: IndexPath(row: row, section: 0))
     }
 }
